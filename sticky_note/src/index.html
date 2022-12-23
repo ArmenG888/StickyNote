@@ -5,11 +5,14 @@
 	<link rel="stylesheet" href="index.css" type="text/css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
-	<button id="switch" onclick="switch_draw_write()">Draw</button>
+	<img class="icons" id="right" onclick="open_nav()" src="icons/right.png">
+	<img class="icons" id="draw" style="opacity:0;" onclick="draw()" src="icons/draw.png">
+	<img class="icons" id="text" style="opacity:0;" onclick="write()" src="icons/text.png">
+
+
 	<div>
 		<canvas	width="300" height="400" class="inner"></canvas>
 		<textarea class="inner" id="note" rows=20></textarea>
-		
 	</div>
 	<script src="app.js" type="text/javascript" charset="utf-8"></script>	
 </body>

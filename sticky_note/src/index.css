@@ -1,3 +1,4 @@
+
 body {
 	font-family: "Segoe UI";
   	overflow:hidden;
@@ -17,3 +18,11 @@ textarea{
 .inner {
 	position: absolute;
   }
+.icons{
+	height: 10%;
+	width: 10%;
+	transition: .2s ease-in-out 0s;
+}
+.icons:hover{
+	transform: scale(1.25);
+}

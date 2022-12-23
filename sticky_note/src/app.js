@@ -1,14 +1,24 @@
-function switch_draw_write(){
-	console.log(document.getElementById('switch').innerText);
-	if(document.getElementById('switch').innerText == "Draw"){
-		document.getElementById('switch').innerHTML = "Write";
-		document.getElementById('note').style.display = "none";
-	}
-	else{
-		document.getElementById('switch').innerHTML = "Draw";
-		document.getElementById('note').style.display = "block";
-	}
-	
+function draw(){
+	document.getElementById('note').style.display = "none";
+}
+function write(){
+	document.getElementById('note').style.display = "block";
+}
+function open_nav(){
+	document.getElementById('draw').style.opacity = 1;
+	document.getElementById('draw').style.transition = "opacity 1s "; 
+	document.getElementById('text').style.opacity = 1;
+	document.getElementById('text').style.transition = "opacity 1s"; 
+	document.getElementById('right').src = "icons/left.png";
+	document.getElementById('right').setAttribute('onclick','close_nav()')
+}
+function close_nav(){
+	document.getElementById('draw').style.opacity = 0;
+	document.getElementById('draw').style.transition = "opacity 1s "; 
+	document.getElementById('text').style.opacity = 0;
+	document.getElementById('text').style.transition = "opacity 1s"; 
+	document.getElementById('right').src = "icons/right.png";
+	document.getElementById('right').setAttribute('onclick','open_nav()')
 }
 
 var canvas =  document.querySelector("canvas");
