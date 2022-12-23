@@ -1,7 +1,19 @@
 body {
-	font-family: 'Sergio-UI';
-  overflow:hidden;
+	font-family: "Segoe UI";
+  	overflow:hidden;
 }
 canvas {
-	background: #fff;
+	background: rgba(0,0,0,0);
 }
+textarea{
+	font-family: "Segoe UI";
+	height: 100%;
+	width: 100%;
+	outline:none;
+	resize: none;
+	border:none;
+	background-color:rgba(0,0,0,0)
+}
+.inner {
+	position: absolute;
+  }

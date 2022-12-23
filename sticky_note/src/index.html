@@ -5,8 +5,12 @@
 	<link rel="stylesheet" href="index.css" type="text/css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
-
-	<canvas	width="300" height="400"></canvas>
+	<button id="switch" onclick="switch_draw_write()">Draw</button>
+	<div>
+		<canvas	width="300" height="400" class="inner"></canvas>
+		<textarea class="inner" id="note" rows=20></textarea>
+		
+	</div>
 	<script src="app.js" type="text/javascript" charset="utf-8"></script>	
 </body>
 </html>
