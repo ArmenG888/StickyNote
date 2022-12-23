@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<title>Draw Pro</title>
 	<link rel="stylesheet" href="index.css" type="text/css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
-	<img class="icons" id="right" onclick="open_nav()" src="icons/right.png">
-	<img class="icons" id="draw" style="opacity:0;" onclick="draw()" src="icons/draw.png">
-	<img class="icons" id="text" style="opacity:0;" onclick="write()" src="icons/text.png">
+	<div id="top-nav">
+		<img class="navbar-icon" id="right" onclick="open_nav()" src="icons/right.png">
+		<img class="icons" id="draw" onclick="draw()" src="icons/draw.png">
+		<img class="icons" id="text" src="icons/text.png">
+		
+		<input type="color" id="color_picker" style='position:absolute;width: 10%;opacity: 0.1;height: 10%;'/>
+		<button class="color-button" id="color-button"></button>
+		<img class="icons" id="palette" src="icons/palette.png">
+		
 
-
+	</div>
 	<div>
 		<canvas	width="300" height="400" class="inner"></canvas>
-		<textarea class="inner" id="note" rows=20></textarea>
+		
 	</div>
 	<script src="app.js" type="text/javascript" charset="utf-8"></script>	
 </body>
