@@ -2,9 +2,11 @@
 body {
 	font-family: "Segoe UI";
   	overflow:hidden;
+	background-color: #ffff88;
 }
 canvas {
-	background: rgba(0,0,0,0);
+	background: rgba(255, 255, 255, 0);
+	
 }
 textarea{
 	font-family: "Segoe UI";
@@ -13,12 +15,11 @@ textarea{
 	outline:none;
 	resize: none;
 	border:none;
-	background-color:rgba(0,0,0,0);
 	display:block;
-}
-.inner {
+	background-color:rgba(0,0,0,0);
 	position: absolute;
-  }
+}
+
 .navbar-icon{
 	height: 10%;
 	width: 10%;
@@ -40,7 +41,7 @@ textarea{
 	height: 10%;
 	width: 10%;
 	transition: .2s ease-in-out 0s;
-	float:right;
+	
 }
 .control-icons:hover{
 	transform: scale(1.25);

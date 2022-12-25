@@ -7,23 +7,17 @@ var lastEvent;
 var isMouseDown = false;
 
 function draw(){
-	if(document.getElementById('note').style.display == "block")
-	{
-		document.getElementById('note').style.display = "none";
-	}
-	
+	document.getElementById('note').style.display = "none";
+	color = "#000000";
+	line_width = 1;
+	console.log("draw")
 }
-function write(){
-	console.log(document.getElementById('note').style.display);
-	if(document.getElementById('note').style.display == "none")
-	{
-		document.getElementById('note').style.display = "block";
-	}
-	
+function text(){
+	document.getElementById('note').style.display = "block";
 }
 function erase(){
 	color = "#ffffff";
-	line_width = 10;
+	line_width = 50;
 }
 function open_nav(){
 	var icons = document.getElementsByClassName('icons');
@@ -32,6 +26,8 @@ function open_nav(){
 		item.style.opacity = 1;
 		item.style.transition = "opacity 0.5s "; 
 	}
+	document.getElementById('color-button').style.opacity = 1;
+	document.getElementById('color-button').style.transition = "opacity 0.5s "; 
 	document.getElementById('right').src = "icons/left.png";
 	document.getElementById('right').setAttribute('onclick','close_nav()')
 }
@@ -42,6 +38,8 @@ function close_nav(){
 		item.style.opacity = 0;
 		item.style.transition = "opacity 0.5s "; 
 	}
+	document.getElementById('color-button').style.opacity = 0;
+	document.getElementById('color-button').style.transition = "opacity 0.5s "; 
 	document.getElementById('right').src = "icons/right.png";
 	document.getElementById('right').setAttribute('onclick','open_nav()')
 }
@@ -59,7 +57,7 @@ function startup() {
 	colorWell.select();
 }
 function updateFirst(event) {
-	document.getElementById("color-button").style = "background-color:" + event.target.value;
+	document.getElementById("color-button").style = "background-color:rgb(0,0,0);";
 	document.getElementById("color-button").style.opacity = 1;
 	color = componentToHex(event.target.value);
 }
