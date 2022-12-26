@@ -6,24 +6,24 @@
 	<link rel="stylesheet" href="index.css" type="text/css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
-	<div id="top-nav" >
-		<img class="navbar-icon" id="right" onclick="open_nav()" src="icons/right.png">
-		<img class="icons" id="draw" onclick="draw()" src="icons/brush.png">
-		<img class="icons" id="text" onclick="text()"  src="icons/text.png">
-		<img class="icons" id="eraser" onclick="erase()" src="icons/eraser.png">
-		<img class="icons" id="brush" src="icons/draw.png">
-		<input type="color" id="color_picker" style='position:absolute;width: 10%;opacity: 0;height: 10%;'/>
-		<button class="color-button" id="color-button"></button>
-		<img class="icons" id="palette" src="icons/palette.png">
-		
-		<img class="control-icons" id="close" src="icons/close.png" style="-webkit-app-region: drag;">
+	<div id="top-nav" style="-webkit-app-region: drag;">
+		<img class="control-icons" id="close" src="icons/close.png" style="float:right;-webkit-app-region: no-drag;"  draggable="false">
+			<img class="navbar-icon" id="right" style="-webkit-app-region: no-drag;" onclick="open_nav()" src="icons/right.png" draggable="false">
+			<img class="icons" id="draw" onclick="draw()"  style="-webkit-app-region: no-drag;"src="icons/brush.png" draggable="false">
+			<img class="icons" id="text" onclick="text()"  style="-webkit-app-region: no-drag;" src="icons/text.png" draggable="false">
+			<img class="icons" id="eraser" onclick="erase()" style="-webkit-app-region: no-drag;" src="icons/eraser.png" draggable="false">
+			<img class="icons" id="brush" src="icons/draw.png" style="-webkit-app-region: no-drag;" draggable="false">
+			<input type="color" id="color_picker" style='position:absolute;width: 10%;opacity: 0;height: 10%;'/>
+			<button class="color-button" id="color-button"></button>
+			<img class="icons" id="palette" style="-webkit-app-region: no-drag;" src="icons/palette.png" draggable="false">
 	</div>
 
 	<div>
 		<textarea id="note" rows=20></textarea>
 		<canvas	width="300" height="400"></canvas>
-		
 	</div>
-	<script src="app.js" type="text/javascript" charset="utf-8"></script>	
+	<script>
+		require('./app.js')
+	  </script>
 </body>
 </html>
