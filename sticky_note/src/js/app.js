@@ -1,6 +1,5 @@
-const remote = require('electron').remote;
 
-const win = remote.getCurrentWindow();
+
 var color = "#000000"
 var line_width = 1;
 var canvas =  document.querySelector("canvas");
