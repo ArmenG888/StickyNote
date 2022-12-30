@@ -2,7 +2,6 @@
 body {
 	font-family: "Segoe UI";
   	overflow:hidden;
-	background-color: #ffff88;
 }
 canvas {
 	background: rgba(255, 255, 255, 0);
