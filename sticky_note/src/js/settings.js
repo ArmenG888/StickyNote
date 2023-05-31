@@ -1,4 +1,14 @@
 
+
+
+function save(){
+    const Store = require('electron-store');
+    const store = new Store();
+
+    store.set('theme', document.getElementById('theme').value);
+    console.log(store.get('theme'));
+}
+
 function themeChange(){
     if (document.getElementById("flexSwitchCheckChecked").checked == true){
         let themes = {1:['rgb(255,255,255)','black'], 2:['rgb(13,17,23)','white'], 3:['rgb(255,255,136)','black']}

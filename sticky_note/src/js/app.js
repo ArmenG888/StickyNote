@@ -99,3 +99,4 @@ document.addEventListener('DOMContentLoaded', () => {
     ipcRenderer.send('quit-app');
   });
 });
+
