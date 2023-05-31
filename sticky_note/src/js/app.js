@@ -90,6 +90,12 @@ canvas.addEventListener("mouseup", function(){
 });
 
 
-document.getElementById('close').addEventListener("click", event => {
-	win.close();
+const { ipcRenderer } = require('electron');
+
+document.addEventListener('DOMContentLoaded', () => {
+  const quitButton = document.getElementById('close');
+
+  quitButton.addEventListener('click', () => {
+    ipcRenderer.send('quit-app');
+  });
 });
