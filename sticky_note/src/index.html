@@ -3,23 +3,25 @@
 <head>
 
 	<title>Draw Pro</title>
+	
 	<link rel="stylesheet" href="css/index.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	
 </head>
 <body>
-	<script src="js/theme.js"></script>
+	<script type="module" src="js/theme.js"></script>
+	
 	<div id="top-nav" style="padding: 10px; -webkit-app-region: drag;">
-		<img class="control-icons" id="close" src="icons/close.png" style="float:right;-webkit-app-region: no-drag;"  draggable="false">
-			<img class="navbar-icon" id="right" style="-webkit-app-region: no-drag;" onclick="open_nav()" src="icons/right.png" draggable="false">
-			<img class="icons" id="draw" onclick="draw()"  style="-webkit-app-region: no-drag;"src="icons/brush.png" draggable="false">
-			<img class="icons" id="text" onclick="text()"  style="-webkit-app-region: no-drag;" src="icons/text.png" draggable="false">
-			<img class="icons" id="eraser" onclick="erase()" style="-webkit-app-region: no-drag;" src="icons/eraser.png" draggable="false">
-			<img class="icons" id="brush" src="icons/draw.png" style="-webkit-app-region: no-drag;" draggable="false">
-			<a href="settings.html"><img class="icons" id="settings" src="icons/settings.png" style="-webkit-app-region: no-drag;" draggable="false"></a>
+			<svg class="control-icons" id="close" style="float:right;-webkit-app-region: no-drag;" draggable="false" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg>
+			<svg class="navbar-icon" id="right" onclick="open_nav()"  style="-webkit-app-region: no-drag;" draggable="false" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="m375-240-43-43 198-198-198-198 43-43 241 241-241 241Z"/></svg>
+			<svg class="icons" id="draw" onclick="draw()" style="-webkit-app-region: no-drag;" draggable="false" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M560-120q-12 0-21-9t-9-21q0-13 9-21.5t21-8.5q59 0 99.5-24t40.5-56q0-23-29.5-45T591-339l47-47q63 19 92.5 52.5T760-260q0 67-61 103.5T560-120ZM240-414q-64-14-92-44t-28-62q0-35 26-63t120-62q66-24 85-39t19-35q0-25-22-43t-68-18q-27 0-46 7t-34 22q-8 8-20.5 9.5T157-748q-11-8-11.5-20t7.5-21q17-22 51-36.5t76-14.5q68 0 109 32.5t41 88.5q0 41-28.5 69.5T290-590q-67 25-88.5 39.5T180-520q0 16 27 30.5t81 27.5l-48 48Zm496-154L608-696l45-45q18-18 40-18t40 18l48 48q18 18 18 40t-18 40l-45 45ZM220-180h42l345-345-42-42-345 345v42Zm-60 60v-128l405-405 128 128-405 405H160Zm405-447 42 42-42-42Z"/></svg>
+			<svg class="icons" onclick="text()" style="-webkit-app-region: no-drag;" draggable="false" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M290-160v-540H80v-100h520v100H390v540H290Zm360 0v-340H520v-100h360v100H750v340H650Z"/></svg>
+			<svg class="icons" id="eraser" onclick="erase()" style="-webkit-app-region: no-drag;" draggable="false" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="m812-703-34-75-75-34 75-34 34-75 34 75 75 34-75 34-34 75ZM187-92l-95-95q-12-11-12-26t12-27l450-450q12-12 29-12t29 12l90 90q11 11 11 29t-11 29L240-92q-12 12-27 12t-26-12Zm23-57 313-313-62-62-313 313 62 62Z"/></svg>
+			<svg class="icons" id="brush" style="-webkit-app-region: no-drag;" draggable="false" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M215-117q-33.835 0-66.917-11.5Q115-140 90-166q35-12 50-35t15-62q0-43.75 30.676-74.375Q216.353-368 260.176-368 304-368 334.5-337.375T365-263q0 64-43.5 105T215-117Zm0-60q35 0 62.5-25t27.5-61q0-20-12.5-32.5T260-308q-20 0-32.5 12.5T215-263q0 39-8.5 57.5T175-183q6 1 20 3.5t20 2.5Zm230-177-90-95 376-376q14-14 31-14.5t32 14.5l29 29q15 15 14.5 32.5T823-732L445-354Zm-185 91Z"/></svg>
+			<a href="settings.html"><svg class="icons" id="settings" style="-webkit-app-region: no-drag;" draggable="false" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="m388-80-20-126q-19-7-40-19t-37-25l-118 54-93-164 108-79q-2-9-2.5-20.5T185-480q0-9 .5-20.5T188-521L80-600l93-164 118 54q16-13 37-25t40-18l20-127h184l20 126q19 7 40.5 18.5T669-710l118-54 93 164-108 77q2 10 2.5 21.5t.5 21.5q0 10-.5 21t-2.5 21l108 78-93 164-118-54q-16 13-36.5 25.5T592-206L572-80H388Zm92-270q54 0 92-38t38-92q0-54-38-92t-92-38q-54 0-92 38t-38 92q0 54 38 92t92 38Zm0-60q-29 0-49.5-20.5T410-480q0-29 20.5-49.5T480-550q29 0 49.5 20.5T550-480q0 29-20.5 49.5T480-410Zm0-70Zm-44 340h88l14-112q33-8 62.5-25t53.5-41l106 46 40-72-94-69q4-17 6.5-33.5T715-480q0-17-2-33.5t-7-33.5l94-69-40-72-106 46q-23-26-52-43.5T538-708l-14-112h-88l-14 112q-34 7-63.5 24T306-642l-106-46-40 72 94 69q-4 17-6.5 33.5T245-480q0 17 2.5 33.5T254-413l-94 69 40 72 106-46q24 24 53.5 41t62.5 25l14 112Z"/></svg></a>
 			<input type="color" id="color_picker" style='position:absolute;width: 10%;opacity: 0;height: 10%;'/>
 			<button class="color-button" id="color-button"></button>
-			<img class="icons" id="palette" style="-webkit-app-region: no-drag;" src="icons/palette.png" draggable="false">
+			<svg class="icons" id="palette" style="-webkit-app-region: no-drag;" draggable="false" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-85 32-158t87.5-127q55.5-54 130-84.5T489-880q79 0 150 26.5T763.5-780q53.5 47 85 111.5T880-527q0 108-63 170.5T650-294h-75q-18 0-31 14t-13 31q0 27 14.5 46t14.5 44q0 38-21 58.5T480-80Zm0-400Zm-233 26q20 0 35-15t15-35q0-20-15-35t-35-15q-20 0-35 15t-15 35q0 20 15 35t35 15Zm126-170q20 0 35-15t15-35q0-20-15-35t-35-15q-20 0-35 15t-15 35q0 20 15 35t35 15Zm214 0q20 0 35-15t15-35q0-20-15-35t-35-15q-20 0-35 15t-15 35q0 20 15 35t35 15Zm131 170q20 0 35-15t15-35q0-20-15-35t-35-15q-20 0-35 15t-15 35q0 20 15 35t35 15ZM480-140q11 0 15.5-4.5T500-159q0-14-14.5-26T471-238q0-46 30-81t76-35h73q76 0 123-44.5T820-527q0-132-100-212.5T489-820q-146 0-247.5 98.5T140-480q0 141 99.5 240.5T480-140Z"/></svg>
 	</div>
 
 	<div>
