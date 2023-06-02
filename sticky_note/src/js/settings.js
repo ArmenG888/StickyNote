@@ -18,5 +18,6 @@ function themeChange(){
         document.getElementById("theme").style.backgroundColor = themes[document.getElementById('theme').value][0];
         document.getElementById("background_image").style.color = themes[document.getElementById('theme').value][1];
         document.getElementById("background_image").style.backgroundColor = themes[document.getElementById('theme').value][0];
+        document.getElementById("close").style.fill = themes[store.get('theme')][1];
     }
 }

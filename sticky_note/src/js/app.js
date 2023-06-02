@@ -29,7 +29,7 @@ function open_nav(){
 	}
 	document.getElementById('color-button').style.opacity = 1;
 	document.getElementById('color-button').style.transition = "opacity 0.5s "; 
-	document.getElementById('right').src = "icons/left.png";
+	document.getElementById('right').style.transform = "rotateY(180deg)"
 	document.getElementById('right').setAttribute('onclick','close_nav()')
 }
 function close_nav(){
@@ -41,7 +41,7 @@ function close_nav(){
 	}
 	document.getElementById('color-button').style.opacity = 0;
 	document.getElementById('color-button').style.transition = "opacity 0.5s "; 
-	document.getElementById('right').src = "icons/right.png";
+	document.getElementById('right').style.transform = "rotateY(0deg)"
 	document.getElementById('right').setAttribute('onclick','open_nav()')
 }
 function componentToHex(c) {
