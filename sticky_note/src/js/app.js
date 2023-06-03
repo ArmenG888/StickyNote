@@ -1,6 +1,6 @@
 
 
-var color = "#000000"
+document.getElementById("color_picker").value = themes[store.get('theme')][3];
 var line_width = 1;
 var canvas =  document.querySelector("canvas");
 var context = canvas.getContext("2d");
@@ -9,7 +9,7 @@ var isMouseDown = false;
 
 function draw(){
 	document.getElementById('note').style.display = "none";
-	color = "#000000";
+	color = document.getElementById("color_picker").value;
 	line_width = 1;
 	console.log("draw")
 }
@@ -17,7 +17,7 @@ function text(){
 	document.getElementById('note').style.display = "block";
 }
 function erase(){
-	color = "#ffffff";
+	color = themes[store.get('theme')][0];
 	line_width = 50;
 }
 function open_nav(){
@@ -52,13 +52,13 @@ function componentToHex(c) {
 window.addEventListener("load", startup, false);
 function startup() {
 	let colorWell = document.querySelector("#color_picker");
-	colorWell.value = "#000000";
+	colorWell.value = themes[store.get('theme')][1];
 	colorWell.addEventListener("input", updateFirst, false);
 	colorWell.addEventListener("change", updateAll, false);
 	colorWell.select();
 }
 function updateFirst(event) {
-	document.getElementById("color-button").style = "background-color:rgb(0,0,0);";
+	document.getElementById("color-button").style = "background-color:"+themes[store.get('theme')][1];
 	document.getElementById("color-button").style.opacity = 1;
 	color = componentToHex(event.target.value);
 }
@@ -100,3 +100,4 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+draw();
