@@ -2,7 +2,7 @@ const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 const Store = require('electron-store');
 const store = new Store();
-
+var stayOnTop = false;
 
 
 
@@ -25,13 +25,12 @@ const createWindow = () => {
   });
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
   mainWindow.webContents.openDevTools();
-
+  mainWindow.setAlwaysOnTop(store.get('stay-on-top'), 'screen');
 };
 
 app.on('ready', createWindow);
 
 app.on('window-all-closed', () => {
-  console.log("int")
   if (process.platform !== 'darwin') {
     app.quit();
   }
@@ -42,7 +41,10 @@ app.on('activate', () => {
     createWindow();
   }
 });
-
+ipcMain.on('stay-on-top', () => {
+  app.relaunch()
+  app.exit()
+});
 ipcMain.on('quit-app', () => {
   app.quit();
 });

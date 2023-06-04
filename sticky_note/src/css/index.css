@@ -19,19 +19,21 @@ textarea{
 	display:block;
 	background-color:rgba(0,0,0,0);
 	position: absolute;
+	color:var(--font-color);
+	padding:5px;
 }
 
 .navbar-icon{
-	height: 10%;
-	width: 10%;
+	height: 25px;
+	width: 25px;
 	transition: .2s ease-in-out 0s;
 }
 .navbar-icon:hover{
 	transform: scale(1.25);
 }
 .icons{
-	height: 10%;
-	width: 10%;
+	height: 25px;
+	width: 25px;
 	transition: .2s ease-in-out 0s;
 	opacity:0;
 }
@@ -39,8 +41,8 @@ textarea{
 	transform: scale(1.25);
 }
 .control-icons{
-	height: 10%;
-	width: 10%;
+	height: 25px;
+	width: 25px;
 	transition: .2s ease-in-out 0s;
 	
 }
@@ -50,8 +52,8 @@ textarea{
 .color-button{
 	background-color:var(--font-color);
 	position:absolute;
-	width: 10%; 
-	margin-top:10%; 
+	width: 25px; 
+	margin-top:27px; 
 	border:none;
 	opacity:0;
 }

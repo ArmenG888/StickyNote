@@ -1,4 +1,4 @@
-
+const { ipcRenderer } = require('electron');
 
 document.getElementById("color_picker").value = themes[store.get('theme')][3];
 var line_width = 1;
@@ -26,6 +26,7 @@ function open_nav(){
 		var item = icons[i];  
 		item.style.opacity = 1;
 		item.style.transition = "opacity 0.5s "; 
+		
 	}
 	document.getElementById('color-button').style.opacity = 1;
 	document.getElementById('color-button').style.transition = "opacity 0.5s "; 
@@ -56,7 +57,13 @@ function startup() {
 	colorWell.addEventListener("input", updateFirst, false);
 	colorWell.addEventListener("change", updateAll, false);
 	colorWell.select();
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
 }
+window.onresize = function() {
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
+};
 function updateFirst(event) {
 	document.getElementById("color-button").style = "background-color:"+themes[store.get('theme')][1];
 	document.getElementById("color-button").style.opacity = 1;
@@ -90,7 +97,6 @@ canvas.addEventListener("mouseup", function(){
 });
 
 
-const { ipcRenderer } = require('electron');
 
 document.addEventListener('DOMContentLoaded', () => {
   const quitButton = document.getElementById('close');
@@ -98,6 +104,14 @@ document.addEventListener('DOMContentLoaded', () => {
   quitButton.addEventListener('click', () => {
     ipcRenderer.send('quit-app');
   });
+});
+download = document.getElementById("download")
+download.addEventListener('click', function (e) {
+	const link = document.createElement('a');
+	link.download = 'download.png';
+	link.href = canvas.toDataURL();
+	link.click();
+	link.delete;
 });
 
 draw();
