@@ -11,7 +11,6 @@ function draw(){
 	document.getElementById('note').style.display = "none";
 	color = document.getElementById("color_picker").value;
 	line_width = 1;
-	console.log("draw")
 }
 function text(){
 	document.getElementById('note').style.display = "block";

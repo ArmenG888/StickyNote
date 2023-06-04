@@ -12,10 +12,18 @@ if (require('electron-squirrel-startup')) {
 }
 
 const createWindow = () => {
+  if (store.get('height') != undefined && store.get('width') != undefined){
+      height = store.get('height');
+      width = store.get('width');
+  }
+  else{
+    width = 300;
+    height = 400;
+  }
   const mainWindow = new BrowserWindow({
     frame:false,
-    width: 300,
-    height: 400,
+    width: width,
+    height: height,
     
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
@@ -25,7 +33,14 @@ const createWindow = () => {
   });
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
   mainWindow.webContents.openDevTools();
-  mainWindow.setAlwaysOnTop(store.get('stay-on-top'), 'screen');
+  if(store.get('stay-on-top') != undefined){
+    mainWindow.setAlwaysOnTop(store.get('stay-on-top'), 'screen');
+  }
+  mainWindow.on("resized", () => {
+    size = mainWindow.getSize();
+    store.set('width', size[0]);
+    store.set('height', size[1]);
+  });
 };
 
 app.on('ready', createWindow);
