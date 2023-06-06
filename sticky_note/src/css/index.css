@@ -24,14 +24,17 @@ textarea{
 }
 
 .navbar-icon{
+	
 	height: 25px;
 	width: 25px;
 	transition: .2s ease-in-out 0s;
 }
 .navbar-icon:hover{
 	transform: scale(1.25);
+	
 }
 .icons{
+	visibility:hidden;
 	height: 25px;
 	width: 25px;
 	transition: .2s ease-in-out 0s;

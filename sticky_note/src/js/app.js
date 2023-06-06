@@ -23,8 +23,10 @@ function open_nav(){
 	var icons = document.getElementsByClassName('icons');
 	for (var i = 0; i < icons.length; ++i) {
 		var item = icons[i];  
+		item.style.visibility = "visible";
 		item.style.opacity = 1;
 		item.style.transition = "opacity 0.5s "; 
+
 		
 	}
 	document.getElementById('color-button').style.opacity = 1;
@@ -34,15 +36,18 @@ function open_nav(){
 }
 function close_nav(){
 	var icons = document.getElementsByClassName('icons');
+	document.getElementById('color-button').style.opacity = 0;
+	document.getElementById('color-button').style.transition = "opacity 0.5s "; 
 	for (var i = 0; i < icons.length; ++i) {
 		var item = icons[i];  
 		item.style.opacity = 0;
 		item.style.transition = "opacity 0.5s "; 
+		item.style.visibility = "hidden";
 	}
-	document.getElementById('color-button').style.opacity = 0;
-	document.getElementById('color-button').style.transition = "opacity 0.5s "; 
+	
 	document.getElementById('right').style.transform = "rotateY(0deg)"
 	document.getElementById('right').setAttribute('onclick','open_nav()')
+	
 }
 function componentToHex(c) {
 	var hex = c.toString(16);
@@ -52,7 +57,7 @@ function componentToHex(c) {
 window.addEventListener("load", startup, false);
 function startup() {
 	let colorWell = document.querySelector("#color_picker");
-	colorWell.value = themes[store.get('theme')][1];
+	colorWell.value = themes[store.get('theme')][3];
 	colorWell.addEventListener("input", updateFirst, false);
 	colorWell.addEventListener("change", updateAll, false);
 	colorWell.select();
@@ -64,7 +69,7 @@ window.onresize = function() {
 	canvas.height = window.innerHeight;
 };
 function updateFirst(event) {
-	document.getElementById("color-button").style = "background-color:"+themes[store.get('theme')][1];
+	document.getElementById("color-button").style = "background-color:" + event.target.value;
 	document.getElementById("color-button").style.opacity = 1;
 	color = componentToHex(event.target.value);
 }
