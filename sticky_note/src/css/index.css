@@ -22,11 +22,13 @@ textarea{
 	color:var(--font-color);
 	padding:5px;
 }
-
+h1{
+	font-size:calc(3.5vh + 3.5vw);
+}
 .navbar-icon{
 	
-	height: 25px;
-	width: 25px;
+	height: calc(4vh + 3vw);
+	width: calc(3vh + 4vw);
 	transition: .2s ease-in-out 0s;
 }
 .navbar-icon:hover{
@@ -35,8 +37,8 @@ textarea{
 }
 .icons{
 	visibility:hidden;
-	height: 25px;
-	width: 25px;
+	height: calc(4vh + 3vw);
+	width: calc(3vh + 4vw);
 	transition: .2s ease-in-out 0s;
 	opacity:0;
 }
@@ -44,8 +46,8 @@ textarea{
 	transform: scale(1.25);
 }
 .control-icons{
-	height: 25px;
-	width: 25px;
+	height: calc(4vh + 3vw);
+	width: calc(3vh + 4vw);
 	transition: .2s ease-in-out 0s;
 	
 }
@@ -55,8 +57,11 @@ textarea{
 .color-button{
 	background-color:var(--font-color);
 	position:absolute;
-	width: 25px; 
-	margin-top:27px; 
+	width: calc(3vh + 4vw);
+	margin-top:calc(2.75vh + 3.75vw); 
 	border:none;
 	opacity:0;
+}
+label{
+	font-size:calc(2vh + 2vw);
 }
