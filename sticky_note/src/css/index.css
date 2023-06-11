@@ -35,7 +35,6 @@ label{
 }
 .navbar-icon:hover{
 	transform: scale(1.25);
-	
 }
 .icons{
 	visibility:hidden;
@@ -51,7 +50,6 @@ label{
 	height: calc(4vh + 3vw);
 	width: calc(3vh + 4vw);
 	transition: .2s ease-in-out 0s;
-	
 }
 .control-icons:hover{
 	transform: scale(1.25);
@@ -64,10 +62,25 @@ label{
 	border:none;
 	opacity:0;
 }
-
 .btn{
 	width: 100%;
 	position: absolute;
 	bottom:0; 
 	height:10vh;
+}
+#top-nav{
+	padding: 2vh; 
+	-webkit-app-region: drag;
+}
+.form-select{
+	height:9vh; 
+	min-height:36px;
+	font-size:calc(1.9vh + 1.9vw); 
+	max-height: 45px;
+}
+.form-control{
+	height:9vh; 
+	min-height:36px;
+	font-size:calc(1.9vh + 1.9vw); 
+	max-height: 45px;
 }

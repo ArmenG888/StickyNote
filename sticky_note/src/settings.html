@@ -20,10 +20,10 @@
     <div style="padding: 10px;">
         <div class="mb-3">
             <label for="formFile" class="form-label">Background Image</label>
-            <input class="form-control" type="file" id="background_image"  style="height:9vh; min-height:36px; font-size:calc(1.9vh + 1.9vw); max-height: 45px;">
+            <input class="form-control" type="file" id="background_image">
           </div>
         <label for="form-select" class="form-label">Theme</label>
-        <select class="form-select" aria-label="Default select example" id="theme" style="height:9vh; min-height:36px; font-size:calc(1.9vh + 1.9vw); max-height: 45px;">
+        <select class="form-select" aria-label="Default select example" id="theme">
             <option selected value="1" id="selected">Light</option>
             <option value="2">Dark</option>
             <option value="3">Yellow</option>
@@ -39,10 +39,7 @@
                     document.getElementById("stay-on-top").checked = true;
                 }
             </script>
-        </div>
-        
-        
-        
+        </div>     
     </div>
     <button type="button" class="btn btn-primary rounded-0" onclick="save()" style="font-size:calc(1.9vh + 1.9vw);">Save</button>
     
