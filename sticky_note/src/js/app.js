@@ -10,7 +10,7 @@ var isMouseDown = false;
 function draw(){
 	document.getElementById('note').style.display = "none";
 	color = document.getElementById("color_picker").value;
-	line_width = 1;
+	line_width = 5;
 }
 function text(){
 	document.getElementById('note').style.display = "block";
