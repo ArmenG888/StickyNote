@@ -13,6 +13,9 @@ function save(){
     if(document.getElementById("background_image").files[0]){
         store.set("bg_image", document.getElementById("background_image").files[0].path)
     }
+    if(document.getElementById("removeBackground").checked){
+        store.delete("bg_image")
+    }
     if(store.get("stay-on-top") != document.getElementById("stay-on-top").checked){
         store.set('stay-on-top', document.getElementById("stay-on-top").checked);
         ipcRenderer.send('stay-on-top');

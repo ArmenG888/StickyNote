@@ -36,6 +36,7 @@ const createWindow = () => {
   if(store.get('stay-on-top') != undefined){
     mainWindow.setAlwaysOnTop(store.get('stay-on-top'), 'screen');
   }
+  console.log(app.getPath('userData'))
   mainWindow.on("resized", () => {
     size = mainWindow.getSize();
     store.set('width', size[0]);

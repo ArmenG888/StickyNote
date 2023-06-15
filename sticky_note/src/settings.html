@@ -19,9 +19,14 @@
     </div>
     <div style="padding: 10px;">
         <div class="mb-3">
-            <label for="formFile" class="form-label">Background Image</label>
+            <label for="background_image" class="form-label">Background Image</label>
             <input class="form-control" type="file" id="background_image">
-               
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="removeBackground">
+                <label class="form-check-label" for="removeBackground">
+                  Remove Background
+                </label>
+            </div>  
         </div>
         <label for="form-select" class="form-label">Theme</label>
         <select class="form-select" aria-label="Default select example" id="theme">
